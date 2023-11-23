@@ -6,28 +6,28 @@ if [[ $GIT_BRANCH == "origin/dev" ]]; then
     ./build.sh
 
     # Logging into Docker Hub 
-    docker login -u abinoveramesh -p dckr_pat_q2pu9uYUcE1x6stfIHjlRL8Vsj0
+    docker login -u kiruthika1113 -p dckr_pat_N3vPt2x-250Jb7VNm0tvTZnxzDI
 
   
     # Tagging the image
-    docker tag capstoneimg abinoveramesh/dev
+    docker tag reactjsimg kiruthika1113/dev
 
     # Push the image to the Dev Docker Hub repository
-    docker push abinoveramesh/dev
+    docker push kiruthika1113/dev
 
 elif [[ $GIT_BRANCH == "origin/main" ]]; then
     # Building project
     ./build.sh
 
     # Logging into Docker Hub
-    docker login -u abinoveramesh -p dckr_pat_q2pu9uYUcE1x6stfIHjlRL8Vsj0
+    docker login -u kiruthika1113 -p dckr_pat_N3vPt2x-250Jb7VNm0tvTZnxzDI
 
    
     # Tagging the image
-    docker tag capstoneimg abinoveramesh/prod 
+    docker tag reactjsimg kiruthika1113/production 
 
     # Push the image to the Prod Docker Hub repository
-    docker push abinoveramesh/prod
+    docker push kiruthika1113/production
 else
     echo "Deployment error"
 fi
